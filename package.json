@@ -1,0 +1,28 @@
+{
+  "name": "food-delivery(zomato)",
+  "version": "1.0.0",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node --watch server.js",
+    "seed": "node seed.js",
+    "db:schema": "psql $DATABASE_URL -f schema.sql",
+    "db:migrate": "node migrate.js",
+    "db:seed": "node seed.js",
+    "db:setup": "node migrate.js && node seed.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "Food Delivery Backend API (Zomato/Swiggy-like) with Node.js, Express, PostgreSQL, Redis, and Socket.IO",
+  "dependencies": {
+    "cors": "^2.8.6",
+    "dotenv": "^17.4.2",
+    "express": "^5.2.1",
+    "jsonwebtoken": "^9.0.3",
+    "pg": "^8.20.0",
+    "redis": "^5.12.1",
+    "socket.io": "^4.8.3",
+    "uuid": "^14.0.0"
+  }
+}
